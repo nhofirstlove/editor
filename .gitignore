@@ -1,0 +1,51 @@
+# --- Dependencies and builds ---
+node_modules/
+dist/
+build/
+coverage/
+.vite/
+*.tsbuildinfo
+
+# --- Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Personal Claude Code files (keep out of git) ---
+CLAUDE.local.md
+.claude/settings.local.json
+.claude/agent-memory-local/
+.claude/worktrees/
+
+# --- Video projects: footage and generated media are large and client-owned ---
+# Everything under projects/ is ignored except the folder placeholder.
+# If you want to version edits (not footage), un-comment the two lines below.
+projects/*
+!projects/.gitkeep
+# !projects/*/
+# !projects/*/timeline.json
+
+# Generated per-project folders (in case projects/ is ever partly tracked)
+projects/*/media/
+projects/*/proxies/
+projects/*/peaks/
+projects/*/exports/
+projects/*/history/
+
+# Atomic-write temp files
+*.tmp
+timeline.json.tmp*
+
+# --- Python (transcription, Milestone 5) ---
+__pycache__/
+*.pyc
+.venv/
+
+# --- Logs and OS/editor junk ---
+*.log
+npm-debug.log*
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
